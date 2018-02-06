@@ -10,19 +10,19 @@
 
 ### Занятие 2. Пользовательские функции. Функции семейства apply. Манипуляции с данными. Пакет tidyverse.
 
-* [материалы занятия]()
+* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_2.html)
 * [презентация]()
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSd4R-RgfVA8RJm0DqMZZhuH-T3uuHpiqb0H-F8yyyKB7zJihg/viewform?c=0&w=1)
 
 ### Занятие 3. Joins. Работа со строками. Пакет stringr
 
-* [материалы занятия]()
+* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_3.html)
 * [презентация]()
 * [домашнее задание]()
 
 ### Занятие 4. Визуализация. Пакет ggplot2. RMarkdown.
 
-* [материалы занятия]()
+* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_4.html)
 * [презентация]()
 
 ### Занятие 5. Визуализация. Пакет ggplot2. Plotly. Shiny
