@@ -23,6 +23,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -289,12 +291,12 @@ $(document).ready(function () {
 <li><em>broom</em>, для перевода в tidy формат статистические модели</li>
 </ul>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ───────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────── tidyverse 1.2.1 ──</code></pre>
 <pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.4
 ## ✔ tibble  1.4.2     ✔ dplyr   0.7.4
 ## ✔ tidyr   0.7.2     ✔ stringr 1.2.0
 ## ✔ readr   1.1.1     ✔ forcats 0.2.0</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────────────────────────── tidyverse_conflicts() ──
+<pre><code>## ── Conflicts ──────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <div class="parallax">
@@ -316,65 +318,43 @@ data_frame(id = 1:12,
 <pre class="r"><code>library(readr)
 df &lt;- read_csv(&quot;https://goo.gl/v7nvho&quot;)
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 12
-##   Gender   Age AgeGroup Education City    SubjectCode Score GivenScore
-##   &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;
-## 1 female    16 child    school    Izhevsk AA          A              5
-## 2 female    16 child    school    Izhevsk AA          A              5
-## 3 female    16 child    school    Izhevsk AA          E              1
-## 4 female    16 child    school    Izhevsk AA          E              1
-## 5 female    16 child    school    Izhevsk AA          A              5
-## 6 female    16 child    school    Izhevsk AA          A              5
-## # ... with 4 more variables: Stimulus &lt;chr&gt;, Prefix &lt;chr&gt;, WordType &lt;chr&gt;,
-## #   CorpusFrequency &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Gender"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Age"],"name":[2],"type":["int"],"align":["right"]},{"label":["AgeGroup"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Education"],"name":[4],"type":["chr"],"align":["left"]},{"label":["City"],"name":[5],"type":["chr"],"align":["left"]},{"label":["SubjectCode"],"name":[6],"type":["chr"],"align":["left"]},{"label":["Score"],"name":[7],"type":["chr"],"align":["left"]},{"label":["GivenScore"],"name":[8],"type":["int"],"align":["right"]},{"label":["Stimulus"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prefix"],"name":[10],"type":["chr"],"align":["left"]},{"label":["WordType"],"name":[11],"type":["chr"],"align":["left"]},{"label":["CorpusFrequency"],"name":[12],"type":["int"],"align":["right"]}],"data":[{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"A","8":"5","9":"utochnit","10":"u","11":"standard","12":"2860"},{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"A","8":"5","9":"ozhestochit","10":"o","11":"standard","12":"686"},{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"E","8":"1","9":"ovneshnit","10":"o","11":"marginal","12":"4"},{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"E","8":"1","9":"oblusit","10":"o","11":"nonce","12":"0"},{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"A","8":"5","9":"osvezhit","10":"o","11":"standard","12":"280"},{"1":"female","2":"16","3":"child","4":"school","5":"Izhevsk","6":"AA","7":"A","8":"5","9":"oschastlivit","10":"o","11":"standard","12":"343"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>df &lt;- read_tsv(&quot;https://goo.gl/33r2Ut&quot;)
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 6
-##   speaker   year gender  cons   inn total
-##   &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;
-## 1 ait1954   1954 f        222   254   476
-## 2 anp1929   1929 m         15    16    31
-## 3 ans1925   1925 f        788   379  1167
-## 4 avch1930  1930 f         43     6    49
-## 5 avi1958   1958 f          1    31    32
-## 6 avm1922   1922 f        778   235  1013</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["gender"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cons"],"name":[4],"type":["int"],"align":["right"]},{"label":["inn"],"name":[5],"type":["int"],"align":["right"]},{"label":["total"],"name":[6],"type":["int"],"align":["right"]}],"data":[{"1":"ait1954","2":"1954","3":"f","4":"222","5":"254","6":"476"},{"1":"anp1929","2":"1929","3":"m","4":"15","5":"16","6":"31"},{"1":"ans1925","2":"1925","3":"f","4":"788","5":"379","6":"1167"},{"1":"avch1930","2":"1930","3":"f","4":"43","5":"6","6":"49"},{"1":"avi1958","2":"1958","3":"f","4":"1","5":"31","6":"32"},{"1":"avm1922","2":"1922","3":"f","4":"778","5":"235","6":"1013"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>df &lt;- read_delim(&quot;https://goo.gl/33r2Ut&quot;, delim = &quot;\t&quot;)
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 6
-##   speaker   year gender  cons   inn total
-##   &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;
-## 1 ait1954   1954 f        222   254   476
-## 2 anp1929   1929 m         15    16    31
-## 3 ans1925   1925 f        788   379  1167
-## 4 avch1930  1930 f         43     6    49
-## 5 avi1958   1958 f          1    31    32
-## 6 avm1922   1922 f        778   235  1013</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["gender"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cons"],"name":[4],"type":["int"],"align":["right"]},{"label":["inn"],"name":[5],"type":["int"],"align":["right"]},{"label":["total"],"name":[6],"type":["int"],"align":["right"]}],"data":[{"1":"ait1954","2":"1954","3":"f","4":"222","5":"254","6":"476"},{"1":"anp1929","2":"1929","3":"m","4":"15","5":"16","6":"31"},{"1":"ans1925","2":"1925","3":"f","4":"788","5":"379","6":"1167"},{"1":"avch1930","2":"1930","3":"f","4":"43","5":"6","6":"49"},{"1":"avi1958","2":"1958","3":"f","4":"1","5":"31","6":"32"},{"1":"avm1922","2":"1922","3":"f","4":"778","5":"235","6":"1013"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>library(readxl)
 xlsx_example &lt;- readxl_example(&quot;datasets.xlsx&quot;)
 df &lt;- read_excel(xlsx_example)
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 5
-##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  
-## 1         5.10        3.50         1.40       0.200 setosa 
-## 2         4.90        3.00         1.40       0.200 setosa 
-## 3         4.70        3.20         1.30       0.200 setosa 
-## 4         4.60        3.10         1.50       0.200 setosa 
-## 5         5.00        3.60         1.40       0.200 setosa 
-## 6         5.40        3.90         1.70       0.400 setosa</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>excel_sheets(xlsx_example)</code></pre>
 <pre><code>## [1] &quot;iris&quot;     &quot;mtcars&quot;   &quot;chickwts&quot; &quot;quakes&quot;</code></pre>
 <pre class="r"><code>df &lt;- read_excel(xlsx_example, sheet = &quot;mtcars&quot;)
 head(df)</code></pre>
-<pre><code>## # A tibble: 6 x 11
-##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  21.0  6.00   160 110    3.90  2.62  16.5  0     1.00  4.00  4.00
-## 2  21.0  6.00   160 110    3.90  2.88  17.0  0     1.00  4.00  4.00
-## 3  22.8  4.00   108  93.0  3.85  2.32  18.6  1.00  1.00  4.00  1.00
-## 4  21.4  6.00   258 110    3.08  3.22  19.4  1.00  0     3.00  1.00
-## 5  18.7  8.00   360 175    3.15  3.44  17.0  0     0     3.00  2.00
-## 6  18.1  6.00   225 105    2.76  3.46  20.2  1.00  0     3.00  1.00</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["mpg"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["disp"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["hp"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["drat"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["wt"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["qsec"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["vs"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["am"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["gear"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["carb"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.620","7":"16.46","8":"0","9":"1","10":"4","11":"4"},{"1":"21.0","2":"6","3":"160","4":"110","5":"3.90","6":"2.875","7":"17.02","8":"0","9":"1","10":"4","11":"4"},{"1":"22.8","2":"4","3":"108","4":"93","5":"3.85","6":"2.320","7":"18.61","8":"1","9":"1","10":"4","11":"1"},{"1":"21.4","2":"6","3":"258","4":"110","5":"3.08","6":"3.215","7":"19.44","8":"1","9":"0","10":"3","11":"1"},{"1":"18.7","2":"8","3":"360","4":"175","5":"3.15","6":"3.440","7":"17.02","8":"0","9":"0","10":"3","11":"2"},{"1":"18.1","2":"6","3":"225","4":"105","5":"2.76","6":"3.460","7":"20.22","8":"1","9":"0","10":"3","11":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>rm(df)</code></pre>
 <div class="parallax">
 
@@ -384,26 +364,11 @@ head(df)</code></pre>
 <h3>4. <code>dplyr</code></h3>
 <pre class="r"><code>homo &lt;- read_csv(&quot;http://goo.gl/Zjr9aF&quot;)
 homo</code></pre>
-<pre><code>## # A tibble: 14 x 10
-##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-##  1 A                61.4             113             120        52.5
-##  2 B                63.9             126             100       114  
-##  3 C                55.1             127             115       103  
-##  4 D                78.1             119             127        58.8
-##  5 E                64.7              93.7           131        37.4
-##  6 F                67.0             128             151        42.0
-##  7 G                65.4             148             129       118  
-##  8 H                62.5             120             105        55.7
-##  9 I                60.4             140             110        96.4
-## 10 J                59.6             121             124       112  
-## 11 K                62.9             137             119        87.6
-## 12 L                53.3             112             146        57.8
-## 13 M                45.1             134             155       100  
-## 14 N                57.7             118             121        37.4
-## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]}],"data":[{"1":"A","2":"61.40","3":"112.60","4":"119.51","5":"52.5","6":"7","7":"18","8":"0.28","9":"hetero","10":"30"},{"1":"B","2":"63.90","3":"126.49","4":"100.29","5":"114.0","6":"20","7":"5","8":"0.80","9":"hetero","10":"19"},{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29"},{"1":"D","2":"78.11","3":"119.17","4":"126.61","5":"58.8","6":"15","7":"10","8":"0.60","9":"homo","10":"36"},{"1":"E","2":"64.71","3":"93.68","4":"130.76","5":"37.4","6":"10","7":"15","8":"0.40","9":"homo","10":"27"},{"1":"F","2":"67.00","3":"127.87","4":"150.79","5":"42.0","6":"17","7":"8","8":"0.68","9":"homo","10":"33"},{"1":"G","2":"65.39","3":"147.52","4":"128.96","5":"118.2","6":"20","7":"5","8":"0.80","9":"hetero","10":"28"},{"1":"H","2":"62.46","3":"120.13","4":"105.26","5":"55.7","6":"21","7":"4","8":"0.84","9":"hetero","10":"22"},{"1":"I","2":"60.45","3":"140.44","4":"109.86","5":"96.4","6":"20","7":"5","8":"0.80","9":"homo","10":"22"},{"1":"J","2":"59.59","3":"121.01","4":"123.90","5":"111.7","6":"8","7":"17","8":"0.32","9":"homo","10":"40"},{"1":"K","2":"62.94","3":"137.37","4":"119.48","5":"87.6","6":"21","7":"4","8":"0.84","9":"homo","10":"30"},{"1":"L","2":"53.31","3":"112.05","4":"146.20","5":"57.8","6":"8","7":"17","8":"0.32","9":"hetero","10":"25"},{"1":"M","2":"45.13","3":"133.74","4":"155.34","5":"100.5","6":"9","7":"16","8":"0.36","9":"hetero","10":"20"},{"1":"N","2":"57.67","3":"118.02","4":"121.48","5":"37.4","6":"4","7":"21","8":"0.16","9":"hetero","10":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <p>The majority of examples in that presentation are based on <a href="http://goo.gl/MKfSc6">Hau 2007</a>. Experiment consisted of a perception and judgment test aimed at measuring the correlation between acoustic cues and perceived sexual orientation. Naïve Cantonese speakers were asked to listen to the Cantonese speech samples collected in Experiment and judge whether the speakers were gay or heterosexual. There are 14 speakers and following parameters:</p>
 <ul>
 <li>[s] duration (<em>s.duration.ms</em>)</li>
@@ -420,15 +385,11 @@ homo</code></pre>
 <p>How many speakers are older than 28?</p>
 <pre class="r"><code>homo %&gt;%
   filter(age &gt; 28, s.duration.ms &lt; 60)</code></pre>
-<pre><code>## # A tibble: 3 x 10
-##   speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##   &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-## 1 C                55.1               127           115       103  
-## 2 J                59.6               121           124       112  
-## 3 N                57.7               118           121        37.4
-## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]}],"data":[{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29"},{"1":"J","2":"59.59","3":"121.01","4":"123.90","5":"111.7","6":"8","7":"17","8":"0.32","9":"homo","10":"40"},{"1":"N","2":"57.67","3":"118.02","4":"121.48","5":"37.4","6":"4","7":"21","8":"0.16","9":"hetero","10":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <p><code>%&gt;%</code> — конвеер (pipe) отправляет результат работы одной функции в другую.</p>
 <pre class="r"><code>sort(sqrt(abs(sin(1:22))), decreasing = TRUE)</code></pre>
 <pre><code>##  [1] 0.9999951 0.9952926 0.9946649 0.9805088 0.9792468 0.9554817 0.9535709
@@ -453,17 +414,11 @@ homo</code></pre>
 <h4>4.2 <code>dplyr::slice()</code></h4>
 <pre class="r"><code>homo %&gt;%
   slice(3:7)</code></pre>
-<pre><code>## # A tibble: 5 x 10
-##   speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##   &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-## 1 C                55.1             127             115       103  
-## 2 D                78.1             119             127        58.8
-## 3 E                64.7              93.7           131        37.4
-## 4 F                67.0             128             151        42.0
-## 5 G                65.4             148             129       118  
-## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]}],"data":[{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29"},{"1":"D","2":"78.11","3":"119.17","4":"126.61","5":"58.8","6":"15","7":"10","8":"0.60","9":"homo","10":"36"},{"1":"E","2":"64.71","3":"93.68","4":"130.76","5":"37.4","6":"10","7":"15","8":"0.40","9":"homo","10":"27"},{"1":"F","2":"67.00","3":"127.87","4":"150.79","5":"42.0","6":"17","7":"8","8":"0.68","9":"homo","10":"33"},{"1":"G","2":"65.39","3":"147.52","4":"128.96","5":"118.2","6":"20","7":"5","8":"0.80","9":"hetero","10":"28"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -472,103 +427,39 @@ homo</code></pre>
 <h4>4.3 <code>dplyr::select()</code></h4>
 <pre class="r"><code>homo %&gt;%
   select(8:10)</code></pre>
-<pre><code>## # A tibble: 14 x 3
-##    perceived.as.homo.percent orientation   age
-##                        &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt;
-##  1                     0.280 hetero         30
-##  2                     0.800 hetero         19
-##  3                     0.360 homo           29
-##  4                     0.600 homo           36
-##  5                     0.400 homo           27
-##  6                     0.680 homo           33
-##  7                     0.800 hetero         28
-##  8                     0.840 hetero         22
-##  9                     0.800 homo           22
-## 10                     0.320 homo           40
-## 11                     0.840 homo           30
-## 12                     0.320 hetero         25
-## 13                     0.360 hetero         20
-## 14                     0.160 hetero         29</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["perceived.as.homo.percent"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[2],"type":["chr"],"align":["left"]},{"label":["age"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"0.28","2":"hetero","3":"30"},{"1":"0.80","2":"hetero","3":"19"},{"1":"0.36","2":"homo","3":"29"},{"1":"0.60","2":"homo","3":"36"},{"1":"0.40","2":"homo","3":"27"},{"1":"0.68","2":"homo","3":"33"},{"1":"0.80","2":"hetero","3":"28"},{"1":"0.84","2":"hetero","3":"22"},{"1":"0.80","2":"homo","3":"22"},{"1":"0.32","2":"homo","3":"40"},{"1":"0.84","2":"homo","3":"30"},{"1":"0.32","2":"hetero","3":"25"},{"1":"0.36","2":"hetero","3":"20"},{"1":"0.16","2":"hetero","3":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   select(speaker:average.f0.Hz)</code></pre>
-<pre><code>## # A tibble: 14 x 4
-##    speaker s.duration.ms vowel.duration.ms average.f0.Hz
-##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;
-##  1 A                61.4             113             120
-##  2 B                63.9             126             100
-##  3 C                55.1             127             115
-##  4 D                78.1             119             127
-##  5 E                64.7              93.7           131
-##  6 F                67.0             128             151
-##  7 G                65.4             148             129
-##  8 H                62.5             120             105
-##  9 I                60.4             140             110
-## 10 J                59.6             121             124
-## 11 K                62.9             137             119
-## 12 L                53.3             112             146
-## 13 M                45.1             134             155
-## 14 N                57.7             118             121</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"61.40","3":"112.60","4":"119.51"},{"1":"B","2":"63.90","3":"126.49","4":"100.29"},{"1":"C","2":"55.08","3":"126.81","4":"114.90"},{"1":"D","2":"78.11","3":"119.17","4":"126.61"},{"1":"E","2":"64.71","3":"93.68","4":"130.76"},{"1":"F","2":"67.00","3":"127.87","4":"150.79"},{"1":"G","2":"65.39","3":"147.52","4":"128.96"},{"1":"H","2":"62.46","3":"120.13","4":"105.26"},{"1":"I","2":"60.45","3":"140.44","4":"109.86"},{"1":"J","2":"59.59","3":"121.01","4":"123.90"},{"1":"K","2":"62.94","3":"137.37","4":"119.48"},{"1":"L","2":"53.31","3":"112.05","4":"146.20"},{"1":"M","2":"45.13","3":"133.74","4":"155.34"},{"1":"N","2":"57.67","3":"118.02","4":"121.48"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   select(-speaker)</code></pre>
-<pre><code>## # A tibble: 14 x 9
-##    s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##            &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-##  1          61.4             113             120        52.5
-##  2          63.9             126             100       114  
-##  3          55.1             127             115       103  
-##  4          78.1             119             127        58.8
-##  5          64.7              93.7           131        37.4
-##  6          67.0             128             151        42.0
-##  7          65.4             148             129       118  
-##  8          62.5             120             105        55.7
-##  9          60.4             140             110        96.4
-## 10          59.6             121             124       112  
-## 11          62.9             137             119        87.6
-## 12          53.3             112             146        57.8
-## 13          45.1             134             155       100  
-## 14          57.7             118             121        37.4
-## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["s.duration.ms"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[5],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[8],"type":["chr"],"align":["left"]},{"label":["age"],"name":[9],"type":["int"],"align":["right"]}],"data":[{"1":"61.40","2":"112.60","3":"119.51","4":"52.5","5":"7","6":"18","7":"0.28","8":"hetero","9":"30"},{"1":"63.90","2":"126.49","3":"100.29","4":"114.0","5":"20","6":"5","7":"0.80","8":"hetero","9":"19"},{"1":"55.08","2":"126.81","3":"114.90","4":"103.2","5":"9","6":"16","7":"0.36","8":"homo","9":"29"},{"1":"78.11","2":"119.17","3":"126.61","4":"58.8","5":"15","6":"10","7":"0.60","8":"homo","9":"36"},{"1":"64.71","2":"93.68","3":"130.76","4":"37.4","5":"10","6":"15","7":"0.40","8":"homo","9":"27"},{"1":"67.00","2":"127.87","3":"150.79","4":"42.0","5":"17","6":"8","7":"0.68","8":"homo","9":"33"},{"1":"65.39","2":"147.52","3":"128.96","4":"118.2","5":"20","6":"5","7":"0.80","8":"hetero","9":"28"},{"1":"62.46","2":"120.13","3":"105.26","4":"55.7","5":"21","6":"4","7":"0.84","8":"hetero","9":"22"},{"1":"60.45","2":"140.44","3":"109.86","4":"96.4","5":"20","6":"5","7":"0.80","8":"homo","9":"22"},{"1":"59.59","2":"121.01","3":"123.90","4":"111.7","5":"8","6":"17","7":"0.32","8":"homo","9":"40"},{"1":"62.94","2":"137.37","3":"119.48","4":"87.6","5":"21","6":"4","7":"0.84","8":"homo","9":"30"},{"1":"53.31","2":"112.05","3":"146.20","4":"57.8","5":"8","6":"17","7":"0.32","8":"hetero","9":"25"},{"1":"45.13","2":"133.74","3":"155.34","4":"100.5","5":"9","6":"16","7":"0.36","8":"hetero","9":"20"},{"1":"57.67","2":"118.02","3":"121.48","4":"37.4","5":"4","6":"21","7":"0.16","8":"hetero","9":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   select(-c(speaker, perceived.as.hetero, perceived.as.homo, perceived.as.homo.percent))</code></pre>
-<pre><code>## # A tibble: 14 x 6
-##    s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz orientation
-##            &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;      
-##  1          61.4             113             120        52.5 hetero     
-##  2          63.9             126             100       114   hetero     
-##  3          55.1             127             115       103   homo       
-##  4          78.1             119             127        58.8 homo       
-##  5          64.7              93.7           131        37.4 homo       
-##  6          67.0             128             151        42.0 homo       
-##  7          65.4             148             129       118   hetero     
-##  8          62.5             120             105        55.7 hetero     
-##  9          60.4             140             110        96.4 homo       
-## 10          59.6             121             124       112   homo       
-## 11          62.9             137             119        87.6 homo       
-## 12          53.3             112             146        57.8 hetero     
-## 13          45.1             134             155       100   hetero     
-## 14          57.7             118             121        37.4 hetero     
-## # ... with 1 more variable: age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["s.duration.ms"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[5],"type":["chr"],"align":["left"]},{"label":["age"],"name":[6],"type":["int"],"align":["right"]}],"data":[{"1":"61.40","2":"112.60","3":"119.51","4":"52.5","5":"hetero","6":"30"},{"1":"63.90","2":"126.49","3":"100.29","4":"114.0","5":"hetero","6":"19"},{"1":"55.08","2":"126.81","3":"114.90","4":"103.2","5":"homo","6":"29"},{"1":"78.11","2":"119.17","3":"126.61","4":"58.8","5":"homo","6":"36"},{"1":"64.71","2":"93.68","3":"130.76","4":"37.4","5":"homo","6":"27"},{"1":"67.00","2":"127.87","3":"150.79","4":"42.0","5":"homo","6":"33"},{"1":"65.39","2":"147.52","3":"128.96","4":"118.2","5":"hetero","6":"28"},{"1":"62.46","2":"120.13","3":"105.26","4":"55.7","5":"hetero","6":"22"},{"1":"60.45","2":"140.44","3":"109.86","4":"96.4","5":"homo","6":"22"},{"1":"59.59","2":"121.01","3":"123.90","4":"111.7","5":"homo","6":"40"},{"1":"62.94","2":"137.37","3":"119.48","4":"87.6","5":"homo","6":"30"},{"1":"53.31","2":"112.05","3":"146.20","4":"57.8","5":"hetero","6":"25"},{"1":"45.13","2":"133.74","3":"155.34","4":"100.5","5":"hetero","6":"20"},{"1":"57.67","2":"118.02","3":"121.48","4":"37.4","5":"hetero","6":"29"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   select(speaker, age, s.duration.ms)</code></pre>
-<pre><code>## # A tibble: 14 x 3
-##    speaker   age s.duration.ms
-##    &lt;chr&gt;   &lt;int&gt;         &lt;dbl&gt;
-##  1 A          30          61.4
-##  2 B          19          63.9
-##  3 C          29          55.1
-##  4 D          36          78.1
-##  5 E          27          64.7
-##  6 F          33          67.0
-##  7 G          28          65.4
-##  8 H          22          62.5
-##  9 I          22          60.4
-## 10 J          40          59.6
-## 11 K          30          62.9
-## 12 L          25          53.3
-## 13 M          20          45.1
-## 14 N          29          57.7</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age"],"name":[2],"type":["int"],"align":["right"]},{"label":["s.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"30","3":"61.40"},{"1":"B","2":"19","3":"63.90"},{"1":"C","2":"29","3":"55.08"},{"1":"D","2":"36","3":"78.11"},{"1":"E","2":"27","3":"64.71"},{"1":"F","2":"33","3":"67.00"},{"1":"G","2":"28","3":"65.39"},{"1":"H","2":"22","3":"62.46"},{"1":"I","2":"22","3":"60.45"},{"1":"J","2":"40","3":"59.59"},{"1":"K","2":"30","3":"62.94"},{"1":"L","2":"25","3":"53.31"},{"1":"M","2":"20","3":"45.13"},{"1":"N","2":"29","3":"57.67"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -577,26 +468,11 @@ homo</code></pre>
 <h4>4.4 <code>dplyr::arrange()</code></h4>
 <pre class="r"><code>homo %&gt;%
   arrange(orientation, desc(age))</code></pre>
-<pre><code>## # A tibble: 14 x 10
-##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-##  1 A                61.4             113             120        52.5
-##  2 N                57.7             118             121        37.4
-##  3 G                65.4             148             129       118  
-##  4 L                53.3             112             146        57.8
-##  5 H                62.5             120             105        55.7
-##  6 M                45.1             134             155       100  
-##  7 B                63.9             126             100       114  
-##  8 J                59.6             121             124       112  
-##  9 D                78.1             119             127        58.8
-## 10 F                67.0             128             151        42.0
-## 11 K                62.9             137             119        87.6
-## 12 C                55.1             127             115       103  
-## 13 E                64.7              93.7           131        37.4
-## 14 I                60.4             140             110        96.4
-## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]}],"data":[{"1":"A","2":"61.40","3":"112.60","4":"119.51","5":"52.5","6":"7","7":"18","8":"0.28","9":"hetero","10":"30"},{"1":"N","2":"57.67","3":"118.02","4":"121.48","5":"37.4","6":"4","7":"21","8":"0.16","9":"hetero","10":"29"},{"1":"G","2":"65.39","3":"147.52","4":"128.96","5":"118.2","6":"20","7":"5","8":"0.80","9":"hetero","10":"28"},{"1":"L","2":"53.31","3":"112.05","4":"146.20","5":"57.8","6":"8","7":"17","8":"0.32","9":"hetero","10":"25"},{"1":"H","2":"62.46","3":"120.13","4":"105.26","5":"55.7","6":"21","7":"4","8":"0.84","9":"hetero","10":"22"},{"1":"M","2":"45.13","3":"133.74","4":"155.34","5":"100.5","6":"9","7":"16","8":"0.36","9":"hetero","10":"20"},{"1":"B","2":"63.90","3":"126.49","4":"100.29","5":"114.0","6":"20","7":"5","8":"0.80","9":"hetero","10":"19"},{"1":"J","2":"59.59","3":"121.01","4":"123.90","5":"111.7","6":"8","7":"17","8":"0.32","9":"homo","10":"40"},{"1":"D","2":"78.11","3":"119.17","4":"126.61","5":"58.8","6":"15","7":"10","8":"0.60","9":"homo","10":"36"},{"1":"F","2":"67.00","3":"127.87","4":"150.79","5":"42.0","6":"17","7":"8","8":"0.68","9":"homo","10":"33"},{"1":"K","2":"62.94","3":"137.37","4":"119.48","5":"87.6","6":"21","7":"4","8":"0.84","9":"homo","10":"30"},{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29"},{"1":"E","2":"64.71","3":"93.68","4":"130.76","5":"37.4","6":"10","7":"15","8":"0.40","9":"homo","10":"27"},{"1":"I","2":"60.45","3":"140.44","4":"109.86","5":"96.4","6":"20","7":"5","8":"0.80","9":"homo","10":"22"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -605,19 +481,18 @@ homo</code></pre>
 <h4>4.5 <code>dplyr::distinct()</code></h4>
 <pre class="r"><code>homo %&gt;%
   distinct(orientation)</code></pre>
-<pre><code>## # A tibble: 2 x 1
-##   orientation
-##   &lt;chr&gt;      
-## 1 hetero     
-## 2 homo</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"hetero"},{"1":"homo"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   distinct(orientation, age &gt; 20)</code></pre>
-<pre><code>## # A tibble: 3 x 2
-##   orientation `age &gt; 20`
-##   &lt;chr&gt;       &lt;lgl&gt;     
-## 1 hetero      T         
-## 2 hetero      F         
-## 3 homo        T</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age > 20"],"name":[2],"type":["lgl"],"align":["right"]}],"data":[{"1":"hetero","2":"TRUE"},{"1":"hetero","2":"FALSE"},{"1":"homo","2":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -627,26 +502,11 @@ homo</code></pre>
 <pre class="r"><code>homo %&gt;%
   mutate(f0.mn = average.f0.Hz - f0.range.Hz/2,
          f0.mx = (average.f0.Hz + f0.range.Hz/2))</code></pre>
-<pre><code>## # A tibble: 14 x 12
-##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
-##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
-##  1 A                61.4             113             120        52.5
-##  2 B                63.9             126             100       114  
-##  3 C                55.1             127             115       103  
-##  4 D                78.1             119             127        58.8
-##  5 E                64.7              93.7           131        37.4
-##  6 F                67.0             128             151        42.0
-##  7 G                65.4             148             129       118  
-##  8 H                62.5             120             105        55.7
-##  9 I                60.4             140             110        96.4
-## 10 J                59.6             121             124       112  
-## 11 K                62.9             137             119        87.6
-## 12 L                53.3             112             146        57.8
-## 13 M                45.1             134             155       100  
-## 14 N                57.7             118             121        37.4
-## # ... with 7 more variables: perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
-## #   orientation &lt;chr&gt;, age &lt;int&gt;, f0.mn &lt;dbl&gt;, f0.mx &lt;dbl&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["speaker"],"name":[1],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[6],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[7],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["orientation"],"name":[9],"type":["chr"],"align":["left"]},{"label":["age"],"name":[10],"type":["int"],"align":["right"]},{"label":["f0.mn"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["f0.mx"],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"A","2":"61.40","3":"112.60","4":"119.51","5":"52.5","6":"7","7":"18","8":"0.28","9":"hetero","10":"30","11":"93.26","12":"145.76"},{"1":"B","2":"63.90","3":"126.49","4":"100.29","5":"114.0","6":"20","7":"5","8":"0.80","9":"hetero","10":"19","11":"43.29","12":"157.29"},{"1":"C","2":"55.08","3":"126.81","4":"114.90","5":"103.2","6":"9","7":"16","8":"0.36","9":"homo","10":"29","11":"63.30","12":"166.50"},{"1":"D","2":"78.11","3":"119.17","4":"126.61","5":"58.8","6":"15","7":"10","8":"0.60","9":"homo","10":"36","11":"97.21","12":"156.01"},{"1":"E","2":"64.71","3":"93.68","4":"130.76","5":"37.4","6":"10","7":"15","8":"0.40","9":"homo","10":"27","11":"112.06","12":"149.46"},{"1":"F","2":"67.00","3":"127.87","4":"150.79","5":"42.0","6":"17","7":"8","8":"0.68","9":"homo","10":"33","11":"129.79","12":"171.79"},{"1":"G","2":"65.39","3":"147.52","4":"128.96","5":"118.2","6":"20","7":"5","8":"0.80","9":"hetero","10":"28","11":"69.86","12":"188.06"},{"1":"H","2":"62.46","3":"120.13","4":"105.26","5":"55.7","6":"21","7":"4","8":"0.84","9":"hetero","10":"22","11":"77.41","12":"133.11"},{"1":"I","2":"60.45","3":"140.44","4":"109.86","5":"96.4","6":"20","7":"5","8":"0.80","9":"homo","10":"22","11":"61.66","12":"158.06"},{"1":"J","2":"59.59","3":"121.01","4":"123.90","5":"111.7","6":"8","7":"17","8":"0.32","9":"homo","10":"40","11":"68.05","12":"179.75"},{"1":"K","2":"62.94","3":"137.37","4":"119.48","5":"87.6","6":"21","7":"4","8":"0.84","9":"homo","10":"30","11":"75.68","12":"163.28"},{"1":"L","2":"53.31","3":"112.05","4":"146.20","5":"57.8","6":"8","7":"17","8":"0.32","9":"hetero","10":"25","11":"117.30","12":"175.10"},{"1":"M","2":"45.13","3":"133.74","4":"155.34","5":"100.5","6":"9","7":"16","8":"0.36","9":"hetero","10":"20","11":"105.09","12":"205.59"},{"1":"N","2":"57.67","3":"118.02","4":"121.48","5":"37.4","6":"4","7":"21","8":"0.16","9":"hetero","10":"29","11":"102.78","12":"140.18"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -655,53 +515,51 @@ homo</code></pre>
 <h4>4.7 <code>dplyr::group_by(...) %&gt;% summarise(...)</code></h4>
 <pre class="r"><code>homo %&gt;%
   summarise(min(age), mean(s.duration.ms))</code></pre>
-<pre><code>## # A tibble: 1 x 2
-##   `min(age)` `mean(s.duration.ms)`
-##        &lt;dbl&gt;                 &lt;dbl&gt;
-## 1       19.0                  61.2</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["min(age)"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean(s.duration.ms)"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"19","2":"61.22429"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   group_by(orientation) %&gt;% 
   summarise(my_mean = mean(s.duration.ms))</code></pre>
-<pre><code>## # A tibble: 2 x 2
-##   orientation my_mean
-##   &lt;chr&gt;         &lt;dbl&gt;
-## 1 hetero         58.5
-## 2 homo           64.0</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["my_mean"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"hetero","2":"58.46571"},{"1":"homo","2":"63.98286"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   group_by(orientation) %&gt;% 
   summarise(mean(s.duration.ms))</code></pre>
-<pre><code>## # A tibble: 2 x 2
-##   orientation `mean(s.duration.ms)`
-##   &lt;chr&gt;                       &lt;dbl&gt;
-## 1 hetero                       58.5
-## 2 homo                         64.0</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean(s.duration.ms)"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"hetero","2":"58.46571"},{"1":"homo","2":"63.98286"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;%
   group_by(orientation) %&gt;% 
   summarise(mean_by_orientation = mean(s.duration.ms))</code></pre>
-<pre><code>## # A tibble: 2 x 2
-##   orientation mean_by_orientation
-##   &lt;chr&gt;                     &lt;dbl&gt;
-## 1 hetero                     58.5
-## 2 homo                       64.0</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean_by_orientation"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"hetero","2":"58.46571"},{"1":"homo","2":"63.98286"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <p>Если нужно посчитать количество вхождений, то можно использовать функцию <code>n()</code> в <code>summarise()</code> или же функцию <code>count()</code>:</p>
 <pre class="r"><code>homo %&gt;% 
   group_by(orientation, age &gt; 20) %&gt;% 
   summarise(my_mean = mean(s.duration.ms), n_observations = n())</code></pre>
-<pre><code>## # A tibble: 3 x 4
-## # Groups:   orientation [?]
-##   orientation `age &gt; 20` my_mean n_observations
-##   &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt;
-## 1 hetero      F             54.5              2
-## 2 hetero      T             60.0              5
-## 3 homo        T             64.0              7</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age > 20"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["my_mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["n_observations"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"hetero","2":"FALSE","3":"54.51500","4":"2"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;% 
   count(orientation, age &gt; 20)</code></pre>
-<pre><code>## # A tibble: 3 x 3
-##   orientation `age &gt; 20`     n
-##   &lt;chr&gt;       &lt;lgl&gt;      &lt;int&gt;
-## 1 hetero      F              2
-## 2 hetero      T              5
-## 3 homo        T              7</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age > 20"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"hetero","2":"FALSE","3":"2"},{"1":"hetero","2":"TRUE","3":"5"},{"1":"homo","2":"TRUE","3":"7"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -714,97 +572,74 @@ homo</code></pre>
   iso = c(&quot;sel&quot;, &quot;fra&quot;, &quot;ckt&quot;, &quot;pol&quot;)
   )
 languages</code></pre>
-<pre><code>## # A tibble: 4 x 3
-##   languages countries iso  
-##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;
-## 1 Selkup    Russia    sel  
-## 2 French    France    fra  
-## 3 Chukchi   Russia    ckt  
-## 4 Kashubian Poland    pol</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["languages"],"name":[1],"type":["chr"],"align":["left"]},{"label":["countries"],"name":[2],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"Selkup","2":"Russia","3":"sel"},{"1":"French","2":"France","3":"fra"},{"1":"Chukchi","2":"Russia","3":"ckt"},{"1":"Kashubian","2":"Poland","3":"pol"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>country_population &lt;- data_frame(
   countries = c(&quot;Russia&quot;, &quot;Poland&quot;, &quot;Finland&quot;),
   population_mln = c(143, 38, 5))
 country_population</code></pre>
-<pre><code>## # A tibble: 3 x 2
-##   countries population_mln
-##   &lt;chr&gt;              &lt;dbl&gt;
-## 1 Russia            143   
-## 2 Poland             38.0 
-## 3 Finland             5.00</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["countries"],"name":[1],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Russia","2":"143"},{"1":"Poland","2":"38"},{"1":"Finland","2":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>inner_join(languages, country_population)</code></pre>
-<pre><code>## # A tibble: 3 x 4
-##   languages countries iso   population_mln
-##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
-## 1 Selkup    Russia    sel            143  
-## 2 Chukchi   Russia    ckt            143  
-## 3 Kashubian Poland    pol             38.0</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["languages"],"name":[1],"type":["chr"],"align":["left"]},{"label":["countries"],"name":[2],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[3],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Selkup","2":"Russia","3":"sel","4":"143"},{"1":"Chukchi","2":"Russia","3":"ckt","4":"143"},{"1":"Kashubian","2":"Poland","3":"pol","4":"38"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>left_join(languages, country_population)</code></pre>
-<pre><code>## # A tibble: 4 x 4
-##   languages countries iso   population_mln
-##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
-## 1 Selkup    Russia    sel            143  
-## 2 French    France    fra             NA  
-## 3 Chukchi   Russia    ckt            143  
-## 4 Kashubian Poland    pol             38.0</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["languages"],"name":[1],"type":["chr"],"align":["left"]},{"label":["countries"],"name":[2],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[3],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Selkup","2":"Russia","3":"sel","4":"143"},{"1":"French","2":"France","3":"fra","4":"NA"},{"1":"Chukchi","2":"Russia","3":"ckt","4":"143"},{"1":"Kashubian","2":"Poland","3":"pol","4":"38"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>right_join(languages, country_population)</code></pre>
-<pre><code>## # A tibble: 4 x 4
-##   languages countries iso   population_mln
-##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
-## 1 Selkup    Russia    sel           143   
-## 2 Chukchi   Russia    ckt           143   
-## 3 Kashubian Poland    pol            38.0 
-## 4 &lt;NA&gt;      Finland   &lt;NA&gt;            5.00</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["languages"],"name":[1],"type":["chr"],"align":["left"]},{"label":["countries"],"name":[2],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[3],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"Selkup","2":"Russia","3":"sel","4":"143"},{"1":"Chukchi","2":"Russia","3":"ckt","4":"143"},{"1":"Kashubian","2":"Poland","3":"pol","4":"38"},{"1":"NA","2":"Finland","3":"NA","4":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>anti_join(languages, country_population)</code></pre>
-<pre><code>## # A tibble: 1 x 3
-##   languages countries iso  
-##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;
-## 1 French    France    fra</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["languages"],"name":[1],"type":["chr"],"align":["left"]},{"label":["countries"],"name":[2],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"French","2":"France","3":"fra"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>anti_join(country_population, languages)</code></pre>
-<pre><code>## # A tibble: 1 x 2
-##   countries population_mln
-##   &lt;chr&gt;              &lt;dbl&gt;
-## 1 Finland             5.00</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["countries"],"name":[1],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Finland","2":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>full_join(country_population, languages)</code></pre>
-<pre><code>## # A tibble: 5 x 4
-##   countries population_mln languages iso  
-##   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;
-## 1 Russia            143    Selkup    sel  
-## 2 Russia            143    Chukchi   ckt  
-## 3 Poland             38.0  Kashubian pol  
-## 4 Finland             5.00 &lt;NA&gt;      &lt;NA&gt; 
-## 5 France             NA    French    fra</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["countries"],"name":[1],"type":["chr"],"align":["left"]},{"label":["population_mln"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["languages"],"name":[3],"type":["chr"],"align":["left"]},{"label":["iso"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Russia","2":"143","3":"Selkup","4":"sel"},{"1":"Russia","2":"143","3":"Chukchi","4":"ckt"},{"1":"Poland","2":"38","3":"Kashubian","4":"pol"},{"1":"Finland","2":"5","3":"NA","4":"NA"},{"1":"France","2":"NA","3":"French","4":"fra"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <p>Существует достаточно забавный трюк, который позволяет использовать <code>.._join()</code> вместе с <code>group_by()</code> и <code>summarise()</code>:</p>
 <pre class="r"><code>homo %&gt;% 
   group_by(orientation, age &gt; 20) %&gt;% 
   summarise(my_mean = mean(s.duration.ms), n_observations = n())</code></pre>
-<pre><code>## # A tibble: 3 x 4
-## # Groups:   orientation [?]
-##   orientation `age &gt; 20` my_mean n_observations
-##   &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt;
-## 1 hetero      F             54.5              2
-## 2 hetero      T             60.0              5
-## 3 homo        T             64.0              7</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age > 20"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["my_mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["n_observations"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"hetero","2":"FALSE","3":"54.51500","4":"2"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>homo %&gt;% 
   group_by(orientation, age &gt; 20) %&gt;% 
   summarise(my_mean = mean(s.duration.ms), n_observations = n()) %&gt;% 
   left_join(homo)</code></pre>
-<pre><code>## # A tibble: 21 x 13
-## # Groups:   orientation [?]
-##    orientation `age &gt; 20` my_mean n_observations speaker s.duration.ms
-##    &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt; &lt;chr&gt;           &lt;dbl&gt;
-##  1 hetero      F             54.5              2 A                61.4
-##  2 hetero      F             54.5              2 B                63.9
-##  3 hetero      F             54.5              2 G                65.4
-##  4 hetero      F             54.5              2 H                62.5
-##  5 hetero      F             54.5              2 L                53.3
-##  6 hetero      F             54.5              2 M                45.1
-##  7 hetero      F             54.5              2 N                57.7
-##  8 hetero      T             60.0              5 A                61.4
-##  9 hetero      T             60.0              5 B                63.9
-## 10 hetero      T             60.0              5 G                65.4
-## # ... with 11 more rows, and 7 more variables: vowel.duration.ms &lt;dbl&gt;,
-## #   average.f0.Hz &lt;dbl&gt;, f0.range.Hz &lt;dbl&gt;, perceived.as.homo &lt;int&gt;,
-## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;, age &lt;int&gt;</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["orientation"],"name":[1],"type":["chr"],"align":["left"]},{"label":["age > 20"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["my_mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["n_observations"],"name":[4],"type":["int"],"align":["right"]},{"label":["speaker"],"name":[5],"type":["chr"],"align":["left"]},{"label":["s.duration.ms"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["vowel.duration.ms"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["average.f0.Hz"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["f0.range.Hz"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["perceived.as.homo"],"name":[10],"type":["int"],"align":["right"]},{"label":["perceived.as.hetero"],"name":[11],"type":["int"],"align":["right"]},{"label":["perceived.as.homo.percent"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["age"],"name":[13],"type":["int"],"align":["right"]}],"data":[{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"A","6":"61.40","7":"112.60","8":"119.51","9":"52.5","10":"7","11":"18","12":"0.28","13":"30"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"B","6":"63.90","7":"126.49","8":"100.29","9":"114.0","10":"20","11":"5","12":"0.80","13":"19"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"G","6":"65.39","7":"147.52","8":"128.96","9":"118.2","10":"20","11":"5","12":"0.80","13":"28"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"H","6":"62.46","7":"120.13","8":"105.26","9":"55.7","10":"21","11":"4","12":"0.84","13":"22"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"L","6":"53.31","7":"112.05","8":"146.20","9":"57.8","10":"8","11":"17","12":"0.32","13":"25"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"M","6":"45.13","7":"133.74","8":"155.34","9":"100.5","10":"9","11":"16","12":"0.36","13":"20"},{"1":"hetero","2":"FALSE","3":"54.51500","4":"2","5":"N","6":"57.67","7":"118.02","8":"121.48","9":"37.4","10":"4","11":"21","12":"0.16","13":"29"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"A","6":"61.40","7":"112.60","8":"119.51","9":"52.5","10":"7","11":"18","12":"0.28","13":"30"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"B","6":"63.90","7":"126.49","8":"100.29","9":"114.0","10":"20","11":"5","12":"0.80","13":"19"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"G","6":"65.39","7":"147.52","8":"128.96","9":"118.2","10":"20","11":"5","12":"0.80","13":"28"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"H","6":"62.46","7":"120.13","8":"105.26","9":"55.7","10":"21","11":"4","12":"0.84","13":"22"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"L","6":"53.31","7":"112.05","8":"146.20","9":"57.8","10":"8","11":"17","12":"0.32","13":"25"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"M","6":"45.13","7":"133.74","8":"155.34","9":"100.5","10":"9","11":"16","12":"0.36","13":"20"},{"1":"hetero","2":"TRUE","3":"60.04600","4":"5","5":"N","6":"57.67","7":"118.02","8":"121.48","9":"37.4","10":"4","11":"21","12":"0.16","13":"29"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"C","6":"55.08","7":"126.81","8":"114.90","9":"103.2","10":"9","11":"16","12":"0.36","13":"29"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"D","6":"78.11","7":"119.17","8":"126.61","9":"58.8","10":"15","11":"10","12":"0.60","13":"36"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"E","6":"64.71","7":"93.68","8":"130.76","9":"37.4","10":"10","11":"15","12":"0.40","13":"27"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"F","6":"67.00","7":"127.87","8":"150.79","9":"42.0","10":"17","11":"8","12":"0.68","13":"33"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"I","6":"60.45","7":"140.44","8":"109.86","9":"96.4","10":"20","11":"5","12":"0.80","13":"22"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"J","6":"59.59","7":"121.01","8":"123.90","9":"111.7","10":"8","11":"17","12":"0.32","13":"40"},{"1":"homo","2":"TRUE","3":"63.98286","4":"7","5":"K","6":"62.94","7":"137.37","8":"119.48","9":"87.6","10":"21","11":"4","12":"0.84","13":"30"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax2">
 
 </div>
@@ -824,27 +659,19 @@ country_population</code></pre>
                    intervocal = c(57, 77, 82, 78),
                    final = c(30, 69, 12, 104))
 df.short</code></pre>
-<pre><code>##    consonant initial intervocal final
-## 1      stops     123         57    30
-## 2 fricatives      87         77    69
-## 3 affricates      73         82    12
-## 4     nasals       7         78   104</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["consonant"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["initial"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["intervocal"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["final"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"stops","2":"123","3":"57","4":"30"},{"1":"fricatives","2":"87","3":"77","4":"69"},{"1":"affricates","2":"73","3":"82","4":"12"},{"1":"nasals","2":"7","3":"78","4":"104"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <ul>
 <li>Long format</li>
 </ul>
-<pre><code>##     consonant   position number
-## 1       stops    initial    123
-## 2  fricatives    initial     87
-## 3  affricates    initial     73
-## 4      nasals    initial      7
-## 5       stops intervocal     57
-## 6  fricatives intervocal     77
-## 7  affricates intervocal     82
-## 8      nasals intervocal     78
-## 9       stops      final     30
-## 10 fricatives      final     69
-## 11 affricates      final     12
-## 12     nasals      final    104</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["consonant"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["position"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"stops","2":"initial","3":"123"},{"1":"fricatives","2":"initial","3":"87"},{"1":"affricates","2":"initial","3":"73"},{"1":"nasals","2":"initial","3":"7"},{"1":"stops","2":"intervocal","3":"57"},{"1":"fricatives","2":"intervocal","3":"77"},{"1":"affricates","2":"intervocal","3":"82"},{"1":"nasals","2":"intervocal","3":"78"},{"1":"stops","2":"final","3":"30"},{"1":"fricatives","2":"final","3":"69"},{"1":"affricates","2":"final","3":"12"},{"1":"nasals","2":"final","3":"104"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <ul>
 <li>Short format → Long format: <code>tidyr::gather()</code></li>
 </ul>
@@ -854,28 +681,20 @@ df.short</code></pre>
                    intervocal = c(57, 77, 82, 78),
                    final = c(30, 69, 12, 104))
 df.short</code></pre>
-<pre><code>##    consonant initial intervocal final
-## 1      stops     123         57    30
-## 2 fricatives      87         77    69
-## 3 affricates      73         82    12
-## 4     nasals       7         78   104</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["consonant"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["initial"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["intervocal"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["final"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"stops","2":"123","3":"57","4":"30"},{"1":"fricatives","2":"87","3":"77","4":"69"},{"1":"affricates","2":"73","3":"82","4":"12"},{"1":"nasals","2":"7","3":"78","4":"104"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>df.short %&gt;% 
   gather(position, number, initial:final) -&gt;
   df.long
 df.long</code></pre>
-<pre><code>##     consonant   position number
-## 1       stops    initial    123
-## 2  fricatives    initial     87
-## 3  affricates    initial     73
-## 4      nasals    initial      7
-## 5       stops intervocal     57
-## 6  fricatives intervocal     77
-## 7  affricates intervocal     82
-## 8      nasals intervocal     78
-## 9       stops      final     30
-## 10 fricatives      final     69
-## 11 affricates      final     12
-## 12     nasals      final    104</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["consonant"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["position"],"name":[2],"type":["chr"],"align":["left"]},{"label":["number"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"stops","2":"initial","3":"123"},{"1":"fricatives","2":"initial","3":"87"},{"1":"affricates","2":"initial","3":"73"},{"1":"nasals","2":"initial","3":"7"},{"1":"stops","2":"intervocal","3":"57"},{"1":"fricatives","2":"intervocal","3":"77"},{"1":"affricates","2":"intervocal","3":"82"},{"1":"nasals","2":"intervocal","3":"78"},{"1":"stops","2":"final","3":"30"},{"1":"fricatives","2":"final","3":"69"},{"1":"affricates","2":"final","3":"12"},{"1":"nasals","2":"final","3":"104"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <ul>
 <li>Long format → Short format: <code>tidyr::spread()</code></li>
 </ul>
@@ -883,11 +702,11 @@ df.long</code></pre>
   spread(position, number) -&gt;
   df.short
 df.short</code></pre>
-<pre><code>##    consonant final initial intervocal
-## 1 affricates    12      73         82
-## 2 fricatives    69      87         77
-## 3     nasals   104       7         78
-## 4      stops    30     123         57</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["consonant"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["final"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["initial"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["intervocal"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"affricates","2":"12","3":"73","4":"82","_rn_":"1"},{"1":"fricatives","2":"69","3":"87","4":"77","_rn_":"2"},{"1":"nasals","2":"104","3":"7","4":"78","_rn_":"3"},{"1":"stops","2":"30","3":"123","4":"57","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <div class="parallax">
 
 </div>

@@ -3,6 +3,9 @@ title: "2. tidyverse"
 author: "Г. Мороз"
 editor_options: 
   chunk_output_type: console
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
