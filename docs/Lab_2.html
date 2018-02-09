@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Г. Мороз" />
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Lab_1.html">Lab 1</a>
+</li>
+<li>
+  <a href="Lab_2.html">Lab 2</a>
+</li>
+<li>
+  <a href="Lab_3.html">Lab 3</a>
+</li>
+<li>
+  <a href="Lab_4.html">Lab 4</a>
+</li>
+<li>
+  <a href="Lab_5.html">Lab 5</a>
+</li>
+<li>
+  <a href="Lab_6.html">Lab 6</a>
+</li>
+<li>
+  <a href="Lab_7.html">Lab 7</a>
+</li>
+<li>
+  <a href="Lab_8.html">Lab 8</a>
+</li>
+<li>
+  <a href="Lab_9.html">Lab 9</a>
+</li>
+<li>
+  <a href="Lab_10.html">Lab 10</a>
+</li>
+<li>
+  <a href="Lab_11.html">Lab 11</a>
+</li>
+<li>
+  <a href="Lab_12.html">Lab 12</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore"><ol start="2" style="list-style-type: decimal">
+<li>tidyverse</li>
+</ol></h1>
+<h4 class="author"><em>Г. Мороз</em></h4>
+
+</div>
+
+
+<style>
+.parallax {
+    /* The image used */
+    background-image: url("1_tidyverse.png");
+    
+    /* Set a specific height */
+    min-height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("1_magrittr.png");
+    
+    /* Set a specific height */
+    min-height: 300px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+</style>
+<div class="parallax">
+
+</div>
+<div class="section level3">
+<h3>1. Введение</h3>
+<p><a href="https://www.tidyverse.org"><em>tidyverse</em></a> — это набор пакетов:</p>
+<ul>
+<li><em>dplyr</em>, для преобразованиия данных</li>
+<li><em>ggplot2</em>, для визуализации</li>
+<li><em>tidyr</em>, для формата tidy data</li>
+<li><em>readr</em>, для чтения файлов в R</li>
+<li><em>purrr</em>, для функционального программирования</li>
+<li><em>tibble</em>, для работы с тибблами, современный вариант датафрейма</li>
+</ul>
+<p>Полезно также знать:</p>
+<ul>
+<li><em>readxl</em>, для чтения .xls и .xlsx</li>
+<li><em>jsonlite</em>, для работы с JSON</li>
+<li><em>rvest</em>, для веб-скреппинга</li>
+<li><em>lubridate</em>, для работы с временем</li>
+<li><em>tidytext</em>, для работы с текстами и корпусами</li>
+<li><em>broom</em>, для перевода в tidy формат статистические модели</li>
+</ul>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 2.2.1     ✔ purrr   0.2.4
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.4
+## ✔ tidyr   0.7.2     ✔ stringr 1.2.0
+## ✔ readr   1.1.1     ✔ forcats 0.2.0</code></pre>
+<pre><code>## ── Conflicts ──────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<div class="parallax">
+
+</div>
+</div>
+<div id="tible" class="section level3">
+<h3>2. tible</h3>
+<pre class="r"><code>head(iris)
+as_tibble(iris)
+data_frame(id = 1:12,
+           letters = month.name)</code></pre>
+<div class="parallax">
+
+</div>
+</div>
+<div id="--readr-readxl" class="section level3">
+<h3>3. Чтение файлов: readr, readxl</h3>
+<pre class="r"><code>library(readr)
+df &lt;- read_csv(&quot;https://goo.gl/v7nvho&quot;)
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 12
+##   Gender   Age AgeGroup Education City    SubjectCode Score GivenScore
+##   &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;int&gt;
+## 1 female    16 child    school    Izhevsk AA          A              5
+## 2 female    16 child    school    Izhevsk AA          A              5
+## 3 female    16 child    school    Izhevsk AA          E              1
+## 4 female    16 child    school    Izhevsk AA          E              1
+## 5 female    16 child    school    Izhevsk AA          A              5
+## 6 female    16 child    school    Izhevsk AA          A              5
+## # ... with 4 more variables: Stimulus &lt;chr&gt;, Prefix &lt;chr&gt;, WordType &lt;chr&gt;,
+## #   CorpusFrequency &lt;int&gt;</code></pre>
+<pre class="r"><code>df &lt;- read_tsv(&quot;https://goo.gl/33r2Ut&quot;)
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 6
+##   speaker   year gender  cons   inn total
+##   &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+## 1 ait1954   1954 f        222   254   476
+## 2 anp1929   1929 m         15    16    31
+## 3 ans1925   1925 f        788   379  1167
+## 4 avch1930  1930 f         43     6    49
+## 5 avi1958   1958 f          1    31    32
+## 6 avm1922   1922 f        778   235  1013</code></pre>
+<pre class="r"><code>df &lt;- read_delim(&quot;https://goo.gl/33r2Ut&quot;, delim = &quot;\t&quot;)
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 6
+##   speaker   year gender  cons   inn total
+##   &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+## 1 ait1954   1954 f        222   254   476
+## 2 anp1929   1929 m         15    16    31
+## 3 ans1925   1925 f        788   379  1167
+## 4 avch1930  1930 f         43     6    49
+## 5 avi1958   1958 f          1    31    32
+## 6 avm1922   1922 f        778   235  1013</code></pre>
+<pre class="r"><code>library(readxl)
+xlsx_example &lt;- readxl_example(&quot;datasets.xlsx&quot;)
+df &lt;- read_excel(xlsx_example)
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  
+## 1         5.10        3.50         1.40       0.200 setosa 
+## 2         4.90        3.00         1.40       0.200 setosa 
+## 3         4.70        3.20         1.30       0.200 setosa 
+## 4         4.60        3.10         1.50       0.200 setosa 
+## 5         5.00        3.60         1.40       0.200 setosa 
+## 6         5.40        3.90         1.70       0.400 setosa</code></pre>
+<pre class="r"><code>excel_sheets(xlsx_example)</code></pre>
+<pre><code>## [1] &quot;iris&quot;     &quot;mtcars&quot;   &quot;chickwts&quot; &quot;quakes&quot;</code></pre>
+<pre class="r"><code>df &lt;- read_excel(xlsx_example, sheet = &quot;mtcars&quot;)
+head(df)</code></pre>
+<pre><code>## # A tibble: 6 x 11
+##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1  21.0  6.00   160 110    3.90  2.62  16.5  0     1.00  4.00  4.00
+## 2  21.0  6.00   160 110    3.90  2.88  17.0  0     1.00  4.00  4.00
+## 3  22.8  4.00   108  93.0  3.85  2.32  18.6  1.00  1.00  4.00  1.00
+## 4  21.4  6.00   258 110    3.08  3.22  19.4  1.00  0     3.00  1.00
+## 5  18.7  8.00   360 175    3.15  3.44  17.0  0     0     3.00  2.00
+## 6  18.1  6.00   225 105    2.76  3.46  20.2  1.00  0     3.00  1.00</code></pre>
+<pre class="r"><code>rm(df)</code></pre>
+<div class="parallax">
+
+</div>
+</div>
+<div id="dplyr" class="section level3">
+<h3>4. <code>dplyr</code></h3>
+<pre class="r"><code>homo &lt;- read_csv(&quot;http://goo.gl/Zjr9aF&quot;)
+homo</code></pre>
+<pre><code>## # A tibble: 14 x 10
+##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+##  1 A                61.4             113             120        52.5
+##  2 B                63.9             126             100       114  
+##  3 C                55.1             127             115       103  
+##  4 D                78.1             119             127        58.8
+##  5 E                64.7              93.7           131        37.4
+##  6 F                67.0             128             151        42.0
+##  7 G                65.4             148             129       118  
+##  8 H                62.5             120             105        55.7
+##  9 I                60.4             140             110        96.4
+## 10 J                59.6             121             124       112  
+## 11 K                62.9             137             119        87.6
+## 12 L                53.3             112             146        57.8
+## 13 M                45.1             134             155       100  
+## 14 N                57.7             118             121        37.4
+## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<p>The majority of examples in that presentation are based on <a href="http://goo.gl/MKfSc6">Hau 2007</a>. Experiment consisted of a perception and judgment test aimed at measuring the correlation between acoustic cues and perceived sexual orientation. Naïve Cantonese speakers were asked to listen to the Cantonese speech samples collected in Experiment and judge whether the speakers were gay or heterosexual. There are 14 speakers and following parameters:</p>
+<ul>
+<li>[s] duration (<em>s.duration.ms</em>)</li>
+<li>vowel duration (<em>vowel.duration.ms</em>)</li>
+<li>fundamental frequencies mean (F0) (<em>average.f0.Hz</em>)</li>
+<li>fundamental frequencies range (<em>f0.range.Hz</em>)</li>
+<li>percentage of homosexual impression (<em>perceived.as.homo</em>)</li>
+<li>percentage of heterosexal impression (<em>perceived.as.hetero</em>)</li>
+<li>speakers orientation (<em>orientation</em>)</li>
+<li>speakers age (<em>age</em>)</li>
+</ul>
+<div id="dplyrfilter" class="section level4">
+<h4>4.1 <code>dplyr::filter()</code></h4>
+<p>How many speakers are older than 28?</p>
+<pre class="r"><code>homo %&gt;%
+  filter(age &gt; 28, s.duration.ms &lt; 60)</code></pre>
+<pre><code>## # A tibble: 3 x 10
+##   speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##   &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+## 1 C                55.1               127           115       103  
+## 2 J                59.6               121           124       112  
+## 3 N                57.7               118           121        37.4
+## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<p><code>%&gt;%</code> — конвеер (pipe) отправляет результат работы одной функции в другую.</p>
+<pre class="r"><code>sort(sqrt(abs(sin(1:22))), decreasing = TRUE)</code></pre>
+<pre><code>##  [1] 0.9999951 0.9952926 0.9946649 0.9805088 0.9792468 0.9554817 0.9535709
+##  [8] 0.9173173 0.9146888 0.8699440 0.8665952 0.8105471 0.8064043 0.7375779
+## [15] 0.7325114 0.6482029 0.6419646 0.5365662 0.5285977 0.3871398 0.3756594
+## [22] 0.0940814</code></pre>
+<pre class="r"><code>1:22 %&gt;% 
+  sin() %&gt;% 
+  abs() %&gt;% 
+  sqrt() %&gt;% 
+  sort(., decreasing = TRUE) # зачем здесь точка?</code></pre>
+<pre><code>##  [1] 0.9999951 0.9952926 0.9946649 0.9805088 0.9792468 0.9554817 0.9535709
+##  [8] 0.9173173 0.9146888 0.8699440 0.8665952 0.8105471 0.8064043 0.7375779
+## [15] 0.7325114 0.6482029 0.6419646 0.5365662 0.5285977 0.3871398 0.3756594
+## [22] 0.0940814</code></pre>
+<p>Конвееры в <em>tidyverse</em> пришли из пакета <em>magrittr</em>. Иногда они работают не корректно с функциями не из <em>tidyverse</em>.</p>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrslice" class="section level4">
+<h4>4.2 <code>dplyr::slice()</code></h4>
+<pre class="r"><code>homo %&gt;%
+  slice(3:7)</code></pre>
+<pre><code>## # A tibble: 5 x 10
+##   speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##   &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+## 1 C                55.1             127             115       103  
+## 2 D                78.1             119             127        58.8
+## 3 E                64.7              93.7           131        37.4
+## 4 F                67.0             128             151        42.0
+## 5 G                65.4             148             129       118  
+## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrselect" class="section level4">
+<h4>4.3 <code>dplyr::select()</code></h4>
+<pre class="r"><code>homo %&gt;%
+  select(8:10)</code></pre>
+<pre><code>## # A tibble: 14 x 3
+##    perceived.as.homo.percent orientation   age
+##                        &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt;
+##  1                     0.280 hetero         30
+##  2                     0.800 hetero         19
+##  3                     0.360 homo           29
+##  4                     0.600 homo           36
+##  5                     0.400 homo           27
+##  6                     0.680 homo           33
+##  7                     0.800 hetero         28
+##  8                     0.840 hetero         22
+##  9                     0.800 homo           22
+## 10                     0.320 homo           40
+## 11                     0.840 homo           30
+## 12                     0.320 hetero         25
+## 13                     0.360 hetero         20
+## 14                     0.160 hetero         29</code></pre>
+<pre class="r"><code>homo %&gt;%
+  select(speaker:average.f0.Hz)</code></pre>
+<pre><code>## # A tibble: 14 x 4
+##    speaker s.duration.ms vowel.duration.ms average.f0.Hz
+##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;
+##  1 A                61.4             113             120
+##  2 B                63.9             126             100
+##  3 C                55.1             127             115
+##  4 D                78.1             119             127
+##  5 E                64.7              93.7           131
+##  6 F                67.0             128             151
+##  7 G                65.4             148             129
+##  8 H                62.5             120             105
+##  9 I                60.4             140             110
+## 10 J                59.6             121             124
+## 11 K                62.9             137             119
+## 12 L                53.3             112             146
+## 13 M                45.1             134             155
+## 14 N                57.7             118             121</code></pre>
+<pre class="r"><code>homo %&gt;%
+  select(-speaker)</code></pre>
+<pre><code>## # A tibble: 14 x 9
+##    s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##            &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+##  1          61.4             113             120        52.5
+##  2          63.9             126             100       114  
+##  3          55.1             127             115       103  
+##  4          78.1             119             127        58.8
+##  5          64.7              93.7           131        37.4
+##  6          67.0             128             151        42.0
+##  7          65.4             148             129       118  
+##  8          62.5             120             105        55.7
+##  9          60.4             140             110        96.4
+## 10          59.6             121             124       112  
+## 11          62.9             137             119        87.6
+## 12          53.3             112             146        57.8
+## 13          45.1             134             155       100  
+## 14          57.7             118             121        37.4
+## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<pre class="r"><code>homo %&gt;%
+  select(-c(speaker, perceived.as.hetero, perceived.as.homo, perceived.as.homo.percent))</code></pre>
+<pre><code>## # A tibble: 14 x 6
+##    s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz orientation
+##            &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;      
+##  1          61.4             113             120        52.5 hetero     
+##  2          63.9             126             100       114   hetero     
+##  3          55.1             127             115       103   homo       
+##  4          78.1             119             127        58.8 homo       
+##  5          64.7              93.7           131        37.4 homo       
+##  6          67.0             128             151        42.0 homo       
+##  7          65.4             148             129       118   hetero     
+##  8          62.5             120             105        55.7 hetero     
+##  9          60.4             140             110        96.4 homo       
+## 10          59.6             121             124       112   homo       
+## 11          62.9             137             119        87.6 homo       
+## 12          53.3             112             146        57.8 hetero     
+## 13          45.1             134             155       100   hetero     
+## 14          57.7             118             121        37.4 hetero     
+## # ... with 1 more variable: age &lt;int&gt;</code></pre>
+<pre class="r"><code>homo %&gt;%
+  select(speaker, age, s.duration.ms)</code></pre>
+<pre><code>## # A tibble: 14 x 3
+##    speaker   age s.duration.ms
+##    &lt;chr&gt;   &lt;int&gt;         &lt;dbl&gt;
+##  1 A          30          61.4
+##  2 B          19          63.9
+##  3 C          29          55.1
+##  4 D          36          78.1
+##  5 E          27          64.7
+##  6 F          33          67.0
+##  7 G          28          65.4
+##  8 H          22          62.5
+##  9 I          22          60.4
+## 10 J          40          59.6
+## 11 K          30          62.9
+## 12 L          25          53.3
+## 13 M          20          45.1
+## 14 N          29          57.7</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrarrange" class="section level4">
+<h4>4.4 <code>dplyr::arrange()</code></h4>
+<pre class="r"><code>homo %&gt;%
+  arrange(orientation, desc(age))</code></pre>
+<pre><code>## # A tibble: 14 x 10
+##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+##  1 A                61.4             113             120        52.5
+##  2 N                57.7             118             121        37.4
+##  3 G                65.4             148             129       118  
+##  4 L                53.3             112             146        57.8
+##  5 H                62.5             120             105        55.7
+##  6 M                45.1             134             155       100  
+##  7 B                63.9             126             100       114  
+##  8 J                59.6             121             124       112  
+##  9 D                78.1             119             127        58.8
+## 10 F                67.0             128             151        42.0
+## 11 K                62.9             137             119        87.6
+## 12 C                55.1             127             115       103  
+## 13 E                64.7              93.7           131        37.4
+## 14 I                60.4             140             110        96.4
+## # ... with 5 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrdistinct" class="section level4">
+<h4>4.5 <code>dplyr::distinct()</code></h4>
+<pre class="r"><code>homo %&gt;%
+  distinct(orientation)</code></pre>
+<pre><code>## # A tibble: 2 x 1
+##   orientation
+##   &lt;chr&gt;      
+## 1 hetero     
+## 2 homo</code></pre>
+<pre class="r"><code>homo %&gt;%
+  distinct(orientation, age &gt; 20)</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   orientation `age &gt; 20`
+##   &lt;chr&gt;       &lt;lgl&gt;     
+## 1 hetero      T         
+## 2 hetero      F         
+## 3 homo        T</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrmutate" class="section level4">
+<h4>4.6 <code>dplyr::mutate()</code></h4>
+<pre class="r"><code>homo %&gt;%
+  mutate(f0.mn = average.f0.Hz - f0.range.Hz/2,
+         f0.mx = (average.f0.Hz + f0.range.Hz/2))</code></pre>
+<pre><code>## # A tibble: 14 x 12
+##    speaker s.duration.ms vowel.duration.ms average.f0.Hz f0.range.Hz
+##    &lt;chr&gt;           &lt;dbl&gt;             &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;
+##  1 A                61.4             113             120        52.5
+##  2 B                63.9             126             100       114  
+##  3 C                55.1             127             115       103  
+##  4 D                78.1             119             127        58.8
+##  5 E                64.7              93.7           131        37.4
+##  6 F                67.0             128             151        42.0
+##  7 G                65.4             148             129       118  
+##  8 H                62.5             120             105        55.7
+##  9 I                60.4             140             110        96.4
+## 10 J                59.6             121             124       112  
+## 11 K                62.9             137             119        87.6
+## 12 L                53.3             112             146        57.8
+## 13 M                45.1             134             155       100  
+## 14 N                57.7             118             121        37.4
+## # ... with 7 more variables: perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;,
+## #   orientation &lt;chr&gt;, age &lt;int&gt;, f0.mn &lt;dbl&gt;, f0.mx &lt;dbl&gt;</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyrgroup_by...-summarise..." class="section level4">
+<h4>4.7 <code>dplyr::group_by(...) %&gt;% summarise(...)</code></h4>
+<pre class="r"><code>homo %&gt;%
+  summarise(min(age), mean(s.duration.ms))</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##   `min(age)` `mean(s.duration.ms)`
+##        &lt;dbl&gt;                 &lt;dbl&gt;
+## 1       19.0                  61.2</code></pre>
+<pre class="r"><code>homo %&gt;%
+  group_by(orientation) %&gt;% 
+  summarise(my_mean = mean(s.duration.ms))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   orientation my_mean
+##   &lt;chr&gt;         &lt;dbl&gt;
+## 1 hetero         58.5
+## 2 homo           64.0</code></pre>
+<pre class="r"><code>homo %&gt;%
+  group_by(orientation) %&gt;% 
+  summarise(mean(s.duration.ms))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   orientation `mean(s.duration.ms)`
+##   &lt;chr&gt;                       &lt;dbl&gt;
+## 1 hetero                       58.5
+## 2 homo                         64.0</code></pre>
+<pre class="r"><code>homo %&gt;%
+  group_by(orientation) %&gt;% 
+  summarise(mean_by_orientation = mean(s.duration.ms))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   orientation mean_by_orientation
+##   &lt;chr&gt;                     &lt;dbl&gt;
+## 1 hetero                     58.5
+## 2 homo                       64.0</code></pre>
+<p>Если нужно посчитать количество вхождений, то можно использовать функцию <code>n()</code> в <code>summarise()</code> или же функцию <code>count()</code>:</p>
+<pre class="r"><code>homo %&gt;% 
+  group_by(orientation, age &gt; 20) %&gt;% 
+  summarise(my_mean = mean(s.duration.ms), n_observations = n())</code></pre>
+<pre><code>## # A tibble: 3 x 4
+## # Groups:   orientation [?]
+##   orientation `age &gt; 20` my_mean n_observations
+##   &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt;
+## 1 hetero      F             54.5              2
+## 2 hetero      T             60.0              5
+## 3 homo        T             64.0              7</code></pre>
+<pre class="r"><code>homo %&gt;% 
+  count(orientation, age &gt; 20)</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   orientation `age &gt; 20`     n
+##   &lt;chr&gt;       &lt;lgl&gt;      &lt;int&gt;
+## 1 hetero      F              2
+## 2 hetero      T              5
+## 3 homo        T              7</code></pre>
+<div class="parallax2">
+
+</div>
+</div>
+<div id="dplyr.._join" class="section level4">
+<h4>4.8 <code>dplyr::.._join()</code></h4>
+<pre class="r"><code>languages &lt;- data_frame(
+  languages = c(&quot;Selkup&quot;, &quot;French&quot;, &quot;Chukchi&quot;, &quot;Kashubian&quot;),
+  countries = c(&quot;Russia&quot;, &quot;France&quot;, &quot;Russia&quot;, &quot;Poland&quot;),
+  iso = c(&quot;sel&quot;, &quot;fra&quot;, &quot;ckt&quot;, &quot;pol&quot;)
+  )
+languages</code></pre>
+<pre><code>## # A tibble: 4 x 3
+##   languages countries iso  
+##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;
+## 1 Selkup    Russia    sel  
+## 2 French    France    fra  
+## 3 Chukchi   Russia    ckt  
+## 4 Kashubian Poland    pol</code></pre>
+<pre class="r"><code>country_population &lt;- data_frame(
+  countries = c(&quot;Russia&quot;, &quot;Poland&quot;, &quot;Finland&quot;),
+  population_mln = c(143, 38, 5))
+country_population</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   countries population_mln
+##   &lt;chr&gt;              &lt;dbl&gt;
+## 1 Russia            143   
+## 2 Poland             38.0 
+## 3 Finland             5.00</code></pre>
+<pre class="r"><code>inner_join(languages, country_population)</code></pre>
+<pre><code>## # A tibble: 3 x 4
+##   languages countries iso   population_mln
+##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
+## 1 Selkup    Russia    sel            143  
+## 2 Chukchi   Russia    ckt            143  
+## 3 Kashubian Poland    pol             38.0</code></pre>
+<pre class="r"><code>left_join(languages, country_population)</code></pre>
+<pre><code>## # A tibble: 4 x 4
+##   languages countries iso   population_mln
+##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
+## 1 Selkup    Russia    sel            143  
+## 2 French    France    fra             NA  
+## 3 Chukchi   Russia    ckt            143  
+## 4 Kashubian Poland    pol             38.0</code></pre>
+<pre class="r"><code>right_join(languages, country_population)</code></pre>
+<pre><code>## # A tibble: 4 x 4
+##   languages countries iso   population_mln
+##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;          &lt;dbl&gt;
+## 1 Selkup    Russia    sel           143   
+## 2 Chukchi   Russia    ckt           143   
+## 3 Kashubian Poland    pol            38.0 
+## 4 &lt;NA&gt;      Finland   &lt;NA&gt;            5.00</code></pre>
+<pre class="r"><code>anti_join(languages, country_population)</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   languages countries iso  
+##   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;
+## 1 French    France    fra</code></pre>
+<pre class="r"><code>anti_join(country_population, languages)</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##   countries population_mln
+##   &lt;chr&gt;              &lt;dbl&gt;
+## 1 Finland             5.00</code></pre>
+<pre class="r"><code>full_join(country_population, languages)</code></pre>
+<pre><code>## # A tibble: 5 x 4
+##   countries population_mln languages iso  
+##   &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;
+## 1 Russia            143    Selkup    sel  
+## 2 Russia            143    Chukchi   ckt  
+## 3 Poland             38.0  Kashubian pol  
+## 4 Finland             5.00 &lt;NA&gt;      &lt;NA&gt; 
+## 5 France             NA    French    fra</code></pre>
+<p>Существует достаточно забавный трюк, который позволяет использовать <code>.._join()</code> вместе с <code>group_by()</code> и <code>summarise()</code>:</p>
+<pre class="r"><code>homo %&gt;% 
+  group_by(orientation, age &gt; 20) %&gt;% 
+  summarise(my_mean = mean(s.duration.ms), n_observations = n())</code></pre>
+<pre><code>## # A tibble: 3 x 4
+## # Groups:   orientation [?]
+##   orientation `age &gt; 20` my_mean n_observations
+##   &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt;
+## 1 hetero      F             54.5              2
+## 2 hetero      T             60.0              5
+## 3 homo        T             64.0              7</code></pre>
+<pre class="r"><code>homo %&gt;% 
+  group_by(orientation, age &gt; 20) %&gt;% 
+  summarise(my_mean = mean(s.duration.ms), n_observations = n()) %&gt;% 
+  left_join(homo)</code></pre>
+<pre><code>## # A tibble: 21 x 13
+## # Groups:   orientation [?]
+##    orientation `age &gt; 20` my_mean n_observations speaker s.duration.ms
+##    &lt;chr&gt;       &lt;lgl&gt;        &lt;dbl&gt;          &lt;int&gt; &lt;chr&gt;           &lt;dbl&gt;
+##  1 hetero      F             54.5              2 A                61.4
+##  2 hetero      F             54.5              2 B                63.9
+##  3 hetero      F             54.5              2 G                65.4
+##  4 hetero      F             54.5              2 H                62.5
+##  5 hetero      F             54.5              2 L                53.3
+##  6 hetero      F             54.5              2 M                45.1
+##  7 hetero      F             54.5              2 N                57.7
+##  8 hetero      T             60.0              5 A                61.4
+##  9 hetero      T             60.0              5 B                63.9
+## 10 hetero      T             60.0              5 G                65.4
+## # ... with 11 more rows, and 7 more variables: vowel.duration.ms &lt;dbl&gt;,
+## #   average.f0.Hz &lt;dbl&gt;, f0.range.Hz &lt;dbl&gt;, perceived.as.homo &lt;int&gt;,
+## #   perceived.as.hetero &lt;int&gt;, perceived.as.homo.percent &lt;dbl&gt;, age &lt;int&gt;</code></pre>
+<div class="parallax2">
+
+</div>
+<div class="parallax">
+
+</div>
+</div>
+</div>
+<div id="tidyr-package" class="section level3">
+<h3>5. tidyr package</h3>
+<ul>
+<li>Short format</li>
+</ul>
+<pre class="r"><code>df.short &lt;- data.frame(
+                   consonant = c(&quot;stops&quot;, &quot;fricatives&quot;, &quot;affricates&quot;, &quot;nasals&quot;),
+                   initial = c(123, 87, 73, 7),
+                   intervocal = c(57, 77, 82, 78),
+                   final = c(30, 69, 12, 104))
+df.short</code></pre>
+<pre><code>##    consonant initial intervocal final
+## 1      stops     123         57    30
+## 2 fricatives      87         77    69
+## 3 affricates      73         82    12
+## 4     nasals       7         78   104</code></pre>
+<ul>
+<li>Long format</li>
+</ul>
+<pre><code>##     consonant   position number
+## 1       stops    initial    123
+## 2  fricatives    initial     87
+## 3  affricates    initial     73
+## 4      nasals    initial      7
+## 5       stops intervocal     57
+## 6  fricatives intervocal     77
+## 7  affricates intervocal     82
+## 8      nasals intervocal     78
+## 9       stops      final     30
+## 10 fricatives      final     69
+## 11 affricates      final     12
+## 12     nasals      final    104</code></pre>
+<ul>
+<li>Short format → Long format: <code>tidyr::gather()</code></li>
+</ul>
+<pre class="r"><code>df.short &lt;- data.frame(
+                   consonant = c(&quot;stops&quot;, &quot;fricatives&quot;, &quot;affricates&quot;, &quot;nasals&quot;),
+                   initial = c(123, 87, 73, 7),
+                   intervocal = c(57, 77, 82, 78),
+                   final = c(30, 69, 12, 104))
+df.short</code></pre>
+<pre><code>##    consonant initial intervocal final
+## 1      stops     123         57    30
+## 2 fricatives      87         77    69
+## 3 affricates      73         82    12
+## 4     nasals       7         78   104</code></pre>
+<pre class="r"><code>df.short %&gt;% 
+  gather(position, number, initial:final) -&gt;
+  df.long
+df.long</code></pre>
+<pre><code>##     consonant   position number
+## 1       stops    initial    123
+## 2  fricatives    initial     87
+## 3  affricates    initial     73
+## 4      nasals    initial      7
+## 5       stops intervocal     57
+## 6  fricatives intervocal     77
+## 7  affricates intervocal     82
+## 8      nasals intervocal     78
+## 9       stops      final     30
+## 10 fricatives      final     69
+## 11 affricates      final     12
+## 12     nasals      final    104</code></pre>
+<ul>
+<li>Long format → Short format: <code>tidyr::spread()</code></li>
+</ul>
+<pre class="r"><code>df.long %&gt;% 
+  spread(position, number) -&gt;
+  df.short
+df.short</code></pre>
+<pre><code>##    consonant final initial intervocal
+## 1 affricates    12      73         82
+## 2 fricatives    69      87         77
+## 3     nasals   104       7         78
+## 4      stops    30     123         57</code></pre>
+<div class="parallax">
+
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
