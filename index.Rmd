@@ -15,6 +15,7 @@
 
 ### Занятие 3. Визуализация. Пакет `ggplot2`. `rmarkdown`.
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_3.html)
+* [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSc2Z6snhSEZRVzHysYsUdKFkl4flE63AY4TFd-UrkmstV8s4g/viewform)
 
 ### Занятие 4. Работа со строками. Пакет `stringr`
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_4.html)
