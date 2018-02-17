@@ -13,17 +13,15 @@
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_2.html)
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSd4R-RgfVA8RJm0DqMZZhuH-T3uuHpiqb0H-F8yyyKB7zJihg/viewform?c=0&w=1)
 
-### Занятие 3. Визуализация. Пакет `ggplot2`. `rmarkdown`.
+### Занятие 3. Визуализация. Пакет `ggplot2`.
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_3.html)
+
+### Занятие 4. Визуализация 2. `rmarkdown`. `plotly`. `shiny`.
+* [материалы занятия]()
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSc2Z6snhSEZRVzHysYsUdKFkl4flE63AY4TFd-UrkmstV8s4g/viewform)
 
-### Занятие 4. Работа со строками. Пакет `stringr`
+### Занятие 5. Работа со строками. Пакет `stringr`
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_4.html)
-
-### Занятие 5. Визуализация. Пакет ggplot2. Plotly. Shiny
-
-* [материалы занятия]()
-* [домашнее задание]()
 
 ### Занятие 6. Повторение.
 

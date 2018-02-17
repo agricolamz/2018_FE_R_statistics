@@ -200,3 +200,28 @@ rt(100, 2) #  t распределение
 rbinom(100, 75, 0.23) #  биномиальное распределение
 ```
 
+# Условия
+```{r}
+x <- 7
+if(x > 5){
+  TRUE
+} else{
+  FALSE
+} 
+
+if(x == 5){
+  "equal"
+} else if(x > 5){
+  "greater"
+} else{
+  "less"
+}
+
+i <- 2
+while(i < 5){
+  print("wow")
+  i <- i + 1
+}
+
+ifelse(x > 24, "greater", "less")
+```

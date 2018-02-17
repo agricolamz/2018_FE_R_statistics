@@ -456,7 +456,7 @@ my_sqrt4(4,12)</code></pre>
 <pre><code>##  [1] 5 5 5 5 5 5 5 5 5 5 9 9 9 9 9 9 9 9 9 9</code></pre>
 <pre class="r"><code># произвольные буквы с повторением
 sample(letters, 3, replace = TRUE)</code></pre>
-<pre><code>## [1] &quot;f&quot; &quot;r&quot; &quot;r&quot;</code></pre>
+<pre><code>## [1] &quot;c&quot; &quot;x&quot; &quot;g&quot;</code></pre>
 <pre class="r"><code># как остановить рандомизатор
 set.seed(42)
 sample(1:190, 3, replace = TRUE)</code></pre>
@@ -524,6 +524,34 @@ rnorm(100, mean = 100, sd = 20) #  нормальное распределени
 ##  [47] 19 13  9 19 19 22 16 16 18 16 13 16 14 19  9 22 22 20 23 18 19 16 12
 ##  [70] 19 13 15 18 16 12 21 16 19 10 18 15 16 13 21 13 22 22 14 17 17 14 17
 ##  [93] 14 15 17 14 22 17 18 20</code></pre>
+</div>
+<div class="section level1">
+<h1>Условия</h1>
+<pre class="r"><code>x &lt;- 7
+if(x &gt; 5){
+  TRUE
+} else{
+  FALSE
+} </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>if(x == 5){
+  &quot;equal&quot;
+} else if(x &gt; 5){
+  &quot;greater&quot;
+} else{
+  &quot;less&quot;
+}</code></pre>
+<pre><code>## [1] &quot;greater&quot;</code></pre>
+<pre class="r"><code>i &lt;- 2
+while(i &lt; 5){
+  print(&quot;wow&quot;)
+  i &lt;- i + 1
+}</code></pre>
+<pre><code>## [1] &quot;wow&quot;
+## [1] &quot;wow&quot;
+## [1] &quot;wow&quot;</code></pre>
+<pre class="r"><code>ifelse(x &gt; 24, &quot;greater&quot;, &quot;less&quot;)</code></pre>
+<pre><code>## [1] &quot;less&quot;</code></pre>
 </div>
 
 
