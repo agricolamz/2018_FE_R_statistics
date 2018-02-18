@@ -48,3 +48,12 @@
 
 * [презентация]()
 * [материалы занятия]()
+
+```{r, echo=FALSE, message = FALSE}
+library(tidyverse)
+library(lubridate)
+library(timevis)
+read_csv("timetable.csv") %>% 
+  mutate(start = dmy_hm(start)) %>% 
+  timevis()
+```
