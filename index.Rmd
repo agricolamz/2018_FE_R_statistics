@@ -25,7 +25,7 @@ editor_options:
 
 ### Занятие 5. Работа со строками. Пакет `stringr` и `stringi`
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_5.html)
-* [домашнее задание]
+* [домашнее задание](https://agricolamz.github.io/2018_FE_R_statistics/Lab_5.html#4_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8)
 
 ### Занятие 6. Расстояния, регулярки и прочая всячина
 * материалы занятия
