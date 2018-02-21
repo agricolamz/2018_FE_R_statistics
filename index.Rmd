@@ -18,41 +18,31 @@ editor_options:
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_2.html)
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSd4R-RgfVA8RJm0DqMZZhuH-T3uuHpiqb0H-F8yyyKB7zJihg/viewform?c=0&w=1)
 
-### Занятие 3. Визуализация. Пакет `ggplot2`.
-* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_3.html)
-
-### Занятие 4. Визуализация 2. `rmarkdown`. `plotly`. `shiny`.
-* [материалы занятия]()
+### Занятие 3-4. Визуализация. Пакет `ggplot2`, `rmarkdown`. `plotly`. `shiny`.
+* [материалы занятия 3](https://agricolamz.github.io/2018_FE_R_statistics/Lab_3.html)
+* [материалы занятия 4](https://agricolamz.github.io/2018_FE_R_statistics/Lab_4.html)
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSc2Z6snhSEZRVzHysYsUdKFkl4flE63AY4TFd-UrkmstV8s4g/viewform)
 
-### Занятие 5. Работа со строками. Пакет `stringr`
-* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_4.html)
+### Занятие 5. Работа со строками. Пакет `stringr` и `stringi`
+* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab_5.html)
 
-### Занятие 6. Повторение.
+### Занятие 6. Расстояния, регулярки и прочая всячина
+* материалы занятия
 
-* [задания]()
+### Занятие 7. Работа с текстами 
+* материалы занятия
 
-### Занятия 7-8. Описантельная статистика. Фриквентистская статистика
+### Занятие 8. Повторение
+* материалы занятия
 
-* [материалы занятия]()
-* [презентация]()
-* [домашнее задание]()
+### Занятия 9-10. Описантельная статистика. Фриквентистская статистика
+* материалы занятия
 
-### Занятие 9. Корреляция и регрессия
+### Занятие 11. Корреляция и регрессия
+* материалы занятия
 
-* [материалы занятия]()
-* [презентация]()
-
-### Занятие 10. Повторение и логистическая регрессия
-
-* [материалы занятия]()
-* [презентация]()
-* домашнее задание
-
-### Занятие 11. Кластеризация и деревья решений
-
-* [презентация]()
-* [материалы занятия]()
+### Занятие 12. Логистическая регрессия. Повторение
+* материалы занятия
 
 ```{r, echo=FALSE, message = FALSE}
 library(tidyverse)
@@ -65,6 +55,11 @@ read_csv("timetable.csv") %>%
            gsub(" ", "_",content),
            ".html'>",
            content,
-           "</a>")) %>% 
+           "</a> <br>",
+           wday(start, label = TRUE),
+           " ",
+           day(start),
+           ".",
+           month(start))) %>% 
   timevis()
 ```
