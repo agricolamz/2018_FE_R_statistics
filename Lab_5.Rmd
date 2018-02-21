@@ -310,7 +310,8 @@ stringr::str_pad(w, 20, "both")
 
 #### 3.1 Объединение
 ```{r}
-a; b
+a <- c("the quick", "brown fox", "jumps", "over the lazy dog")
+b <- c("the quick", "brown fox", "jumps over the lazy dog")
 c(a, b)
 unique(c(a, b))
 union(a, b)
@@ -336,7 +337,7 @@ setdiff(a, b)
 
 #### 3.4 Сравнение
 ```{r}
-c <- c("brown", "fox", "jumps", "over", "the quick")
+c <- c("brown fox", "jumps", "over the lazy dog", "the quick")
 a; c
 setequal(c, a)
 identical(c, a)
@@ -346,10 +347,10 @@ identical(c, a)
 #### 3.5 Подмножество?
 ```{r}
 a
-is.element("over", a)
-is.element("the dog", a)
-is.element(c("over", "the dog"), a)
-c("over", "the dog") %in% a
+is.element("jumps", a)
+is.element("the lazy dog", a)
+is.element(c("jumps", "the lazy dog"), a)
+c("jumps", "the lazy dog") %in% a
 ```
 
 <div class="parallax"></div>

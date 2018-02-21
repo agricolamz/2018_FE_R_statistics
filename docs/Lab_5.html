@@ -795,22 +795,21 @@ stringr<span class="op">::</span><span class="kw">str_pad</span>(w, <span class=
 </div>
 <div class="section level4">
 <h4>3.1 Объединение</h4>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a; b</code></pre></div>
-<pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
-## [4] &quot;over the lazy dog&quot;</code></pre>
-<pre><code>## [1] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(a, b)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;the quick&quot;</span>, <span class="st">&quot;brown fox&quot;</span>, <span class="st">&quot;jumps&quot;</span>, <span class="st">&quot;over the lazy dog&quot;</span>)
+b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;the quick&quot;</span>, <span class="st">&quot;brown fox&quot;</span>, <span class="st">&quot;jumps over the lazy dog&quot;</span>)
+<span class="kw">c</span>(a, b)</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;               &quot;brown fox&quot;              
 ## [3] &quot;jumps&quot;                   &quot;over the lazy dog&quot;      
-## [5] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
+## [5] &quot;the quick&quot;               &quot;brown fox&quot;              
+## [7] &quot;jumps over the lazy dog&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(<span class="kw">c</span>(a, b))</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;               &quot;brown fox&quot;              
 ## [3] &quot;jumps&quot;                   &quot;over the lazy dog&quot;      
-## [5] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
+## [5] &quot;jumps over the lazy dog&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">union</span>(a, b)</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;               &quot;brown fox&quot;              
 ## [3] &quot;jumps&quot;                   &quot;over the lazy dog&quot;      
-## [5] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
+## [5] &quot;jumps over the lazy dog&quot;</code></pre>
 <div class="parallax">
 
 </div>
@@ -820,9 +819,10 @@ stringr<span class="op">::</span><span class="kw">str_pad</span>(w, <span class=
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a; b</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
 ## [4] &quot;over the lazy dog&quot;</code></pre>
-<pre><code>## [1] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
+<pre><code>## [1] &quot;the quick&quot;               &quot;brown fox&quot;              
+## [3] &quot;jumps over the lazy dog&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">intersect</span>(a, b)</code></pre></div>
-<pre><code>## character(0)</code></pre>
+<pre><code>## [1] &quot;the quick&quot; &quot;brown fox&quot;</code></pre>
 <div class="parallax">
 
 </div>
@@ -832,23 +832,24 @@ stringr<span class="op">::</span><span class="kw">str_pad</span>(w, <span class=
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a; b</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
 ## [4] &quot;over the lazy dog&quot;</code></pre>
-<pre><code>## [1] &quot;the quick brown fox&quot;     &quot;jumps over the lazy dog&quot;</code></pre>
+<pre><code>## [1] &quot;the quick&quot;               &quot;brown fox&quot;              
+## [3] &quot;jumps over the lazy dog&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setdiff</span>(a, b)</code></pre></div>
-<pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
-## [4] &quot;over the lazy dog&quot;</code></pre>
+<pre><code>## [1] &quot;jumps&quot;             &quot;over the lazy dog&quot;</code></pre>
 <div class="parallax">
 
 </div>
 </div>
 <div class="section level4">
 <h4>3.4 Сравнение</h4>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;brown&quot;</span>, <span class="st">&quot;fox&quot;</span>, <span class="st">&quot;jumps&quot;</span>, <span class="st">&quot;over&quot;</span>, <span class="st">&quot;the quick&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;brown fox&quot;</span>, <span class="st">&quot;jumps&quot;</span>, <span class="st">&quot;over the lazy dog&quot;</span>, <span class="st">&quot;the quick&quot;</span>)
 a; c</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
 ## [4] &quot;over the lazy dog&quot;</code></pre>
-<pre><code>## [1] &quot;brown&quot;     &quot;fox&quot;       &quot;jumps&quot;     &quot;over&quot;      &quot;the quick&quot;</code></pre>
+<pre><code>## [1] &quot;brown fox&quot;         &quot;jumps&quot;             &quot;over the lazy dog&quot;
+## [4] &quot;the quick&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setequal</span>(c, a)</code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">identical</span>(c, a)</code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <div class="parallax">
@@ -860,14 +861,14 @@ a; c</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a</code></pre></div>
 <pre><code>## [1] &quot;the quick&quot;         &quot;brown fox&quot;         &quot;jumps&quot;            
 ## [4] &quot;over the lazy dog&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="st">&quot;over&quot;</span>, a)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="st">&quot;jumps&quot;</span>, a)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="st">&quot;the lazy dog&quot;</span>, a)</code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="st">&quot;the dog&quot;</span>, a)</code></pre></div>
-<pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="kw">c</span>(<span class="st">&quot;over&quot;</span>, <span class="st">&quot;the dog&quot;</span>), a)</code></pre></div>
-<pre><code>## [1] FALSE FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;over&quot;</span>, <span class="st">&quot;the dog&quot;</span>) <span class="op">%in%</span><span class="st"> </span>a</code></pre></div>
-<pre><code>## [1] FALSE FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.element</span>(<span class="kw">c</span>(<span class="st">&quot;jumps&quot;</span>, <span class="st">&quot;the lazy dog&quot;</span>), a)</code></pre></div>
+<pre><code>## [1]  TRUE FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(<span class="st">&quot;jumps&quot;</span>, <span class="st">&quot;the lazy dog&quot;</span>) <span class="op">%in%</span><span class="st"> </span>a</code></pre></div>
+<pre><code>## [1]  TRUE FALSE</code></pre>
 <div class="parallax">
 
 </div>
