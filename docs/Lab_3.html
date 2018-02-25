@@ -720,9 +720,9 @@ homo <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
 <p><img src="Lab_3_files/figure-html/unnamed-chunk-26-1.png" width="672" /> Сколько нам нужно ячеек гистограммы?</p>
 <ul>
-<li>[Sturgers 1926] <em>nclass.Sturges(adyghe$F1)</em></li>
-<li>[Scott 1979] <em>nclass.scott(adyghe$F1)</em></li>
-<li>[Freedman, Diaconis 1981] <em>nclass.FD(adyghe$F1)</em></li>
+<li>[Sturgers 1926] <code>nclass.Sturges(homo$s.duration.ms)</code></li>
+<li>[Scott 1979] <code>nclass.scott(homo$s.duration.ms)</code></li>
+<li>[Freedman, Diaconis 1981] <code>nclass.FD(homo$s.duration.ms)</code></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">homo <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(s.duration.ms)) <span class="op">+</span>
