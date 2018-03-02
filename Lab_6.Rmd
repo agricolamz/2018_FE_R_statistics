@@ -1,5 +1,5 @@
 ---
-title: "2. Определение языка. Расстояния. Регулярки"
+title: "6. Определение языка. Расстояния. Регулярки"
 date: "25 июля 2017, АНДАН"
 author: "Г. Мороз"
 ---
@@ -7,7 +7,7 @@ author: "Г. Мороз"
 <style>
 .parallax {
     /* The image used */
-    background-image: url("2_distance.jpg");
+    background-image: url("6_distance.jpg");
 
     /* Set a specific height */
     min-height: 360px; 
