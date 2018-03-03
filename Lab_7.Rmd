@@ -1,7 +1,16 @@
 ---
-title: "3. Частотность слов в тексте"
-date: "26 июля 2017, АНДАН"
+title: "7. Частотность слов в тексте"
 author: "Г. Мороз"
+output:
+  html_document:
+    theme: spacelab
+    highlight: pygments
+    toc: yes
+    toc_position: right
+    toc_depth: 4
+    toc_float: yes
+    smooth_scroll: false
+    df_print: paged
 ---
 <style>
 .parallax {
