@@ -41,6 +41,7 @@ editor_options:
 
 ### Занятие 11. Корреляция и регрессия
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/correlation_regressions.pdf)
+* [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSctIDQQBsIGTMjkzuGiAEXVcE9N9EBPrKjkgyuUheVKHewvVQ/viewform)
 
 ### Занятие 12. Логистическая регрессия. Повторение
 * материалы занятия
