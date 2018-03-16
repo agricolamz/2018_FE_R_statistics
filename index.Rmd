@@ -40,7 +40,7 @@ editor_options:
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab%209-10.%20descriptive_and_simple_statistics.pdf)
 
 ### Занятие 11. Корреляция и регрессия
-* материалы занятия
+* [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/correlation_regressions.pdf)
 
 ### Занятие 12. Логистическая регрессия. Повторение
 * материалы занятия
