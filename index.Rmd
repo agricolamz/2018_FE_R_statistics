@@ -39,12 +39,9 @@ editor_options:
 ### Занятия 9-10. Описантельная статистика. Фриквентистская статистика
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/Lab%209-10.%20descriptive_and_simple_statistics.pdf)
 
-### Занятие 11. Корреляция и регрессия
+### Занятие 11. и 12. Корреляция и регрессия
 * [материалы занятия](https://agricolamz.github.io/2018_FE_R_statistics/correlation_regressions.pdf)
 * [домашнее задание](https://docs.google.com/forms/d/e/1FAIpQLSctIDQQBsIGTMjkzuGiAEXVcE9N9EBPrKjkgyuUheVKHewvVQ/viewform)
-
-### Занятие 12. Логистическая регрессия. Повторение
-* материалы занятия
 
 Календарь можно скачать [в формате `.csv`](https://raw.githubusercontent.com/agricolamz/2018_FE_R_statistics/master/timetable.csv) и импортировать в Google Calendar, MS Outlook и т. п.
 
